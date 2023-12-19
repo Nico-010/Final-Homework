@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+// Cupress.Commands.add('register', (firstName, lastName, email, password, password2) => {
+
+// })
+
+
+Cypress.Commands.add('registerEE', (firstName, lastName, email, password, password2) => {
+    cy.get('#firstName').type(firstName)
+    cy.get('#lastName').type(lastName)
+    cy.get('#email').type(email)
+    cy.get('#password').type(password)
+    cy.get('#confirmPassword').type(password2)
+})
